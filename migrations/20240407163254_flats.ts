@@ -8,7 +8,9 @@ export async function up(knex: Knex): Promise<void> {
             .notNullable()
 
         table.integer('numberOfHouse')
-            .notNullable()
+             .notNullable()
+             .references('number')
+             .inTable('houses')
 
         table.integer('number')
             .notNullable()
