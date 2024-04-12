@@ -11,10 +11,14 @@ export class FlatsService {
 	) {}
 
 	public async create(dto: CreateFlatDto): Promise<FlatInterface> {
-		return this.flatsRepo.create(dto)
+		return await this.flatsRepo.create(dto);
 	}
 
 	public async getAll(): Promise<FlatInterface[]> {
-        return this.flatsRepo.getAll()
+        return await this.flatsRepo.getAll();
     }
+
+	public async delete(id: string): Promise<void> {
+		await this.flatsRepo.delete(id);
+	}
 }

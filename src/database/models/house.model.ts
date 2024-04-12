@@ -13,4 +13,15 @@ export class HouseModel extends Model {
   $beforeInsert(): void {
     this.id = uuidv4();
   }
+
+  static relationMappings = {
+    flats: {
+      relation: Model.HasManyRelation,
+      modelClass: `${__dirname}/flat.model`,
+      join: {
+        from: 'houses.id',
+        to: 'flats.houseId'
+      }
+    }
+  }
 }

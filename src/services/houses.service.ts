@@ -17,4 +17,8 @@ constructor(
   public async getAll(): Promise<HouseInterface[]> {
     return this.houseRepo.getAll();
   }
+
+  public async delete(id: string): Promise<void> {
+  return this.houseRepo.delete(id);
+  }
 }

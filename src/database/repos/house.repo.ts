@@ -19,5 +19,12 @@ export class HouseRepo {
   async getAll() : Promise<HouseInterface[]> {
     return this.houseModel.query()
                .select()
+               .withGraphJoined('flats')
+  }
+
+  async delete(id: string): Promise<void> {
+    this.houseModel.query()
+               .delete()
+               .where('id', id)
   }
 }

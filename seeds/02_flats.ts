@@ -8,6 +8,7 @@ export async function seed(knex: Knex): Promise<void> {
     await knex("flats").insert([
         {
             id: "eaf70fce-dd21-427b-88c5-237f6da05ac8",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 1,
             countOfRooms: 2,
@@ -15,6 +16,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "17248edc-eeb5-411a-b4bf-2797da04ef20",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 2,
             countOfRooms: 2,
@@ -22,6 +24,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "9b2c71e9-7d14-446b-865a-6fa912733d4d",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 3,
             countOfRooms: 2,
@@ -29,6 +32,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "2461ea53-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 4,
             countOfRooms: 2,
@@ -36,6 +40,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "33277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 5,
             countOfRooms: 2,
@@ -43,6 +48,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "42277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 6,
             countOfRooms: 2,
@@ -50,6 +56,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "51277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 7,
             countOfRooms: 2,
@@ -57,6 +64,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "60277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 8,
             countOfRooms: 2,
@@ -64,6 +72,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "6f277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 9,
             countOfRooms: 2,
@@ -71,6 +80,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "7e277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c009a41-2a9a-451e-865d-fe3b2c7ea656",
             numberOfHouse: 1,
             number: 10,
             countOfRooms: 2,
@@ -78,6 +88,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "8d277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c2f908b-c53a-4882-9ea0-c5264aa1fde4",
             numberOfHouse: 2,
             number: 1,
             countOfRooms: 2,
@@ -85,6 +96,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "9c277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c2f908b-c53a-4882-9ea0-c5264aa1fde4",
             numberOfHouse: 2,
             number: 2,
             countOfRooms: 2,
@@ -92,6 +104,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "ac277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c2f908b-c53a-4882-9ea0-c5264aa1fde4",
             numberOfHouse: 2,
             number: 3,
             countOfRooms: 2,
@@ -99,6 +112,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "bc277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "5c2f908b-c53a-4882-9ea0-c5264aa1fde4",
             numberOfHouse: 2,
             number: 4,
             countOfRooms: 2,
@@ -106,6 +120,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "cc277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 1,
             countOfRooms: 2,
@@ -113,6 +128,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "dc277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 2,
             countOfRooms: 2,
@@ -120,6 +136,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "ec277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 3,
             countOfRooms: 2,
@@ -127,6 +144,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "fc277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 4,
             countOfRooms: 2,
@@ -134,6 +152,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "0d277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 5,
             countOfRooms: 2,
@@ -141,6 +160,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "1c277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 6,
             countOfRooms: 2,
@@ -148,6 +168,7 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "2b277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 7,
             countOfRooms: 2,
@@ -155,10 +176,11 @@ export async function seed(knex: Knex): Promise<void> {
         },
         {
             id: "3a277777-189d-4baa-a3ab-ead44715622e",
+            houseId: "8709bd9a-e387-4848-8971-e25839b26053",
             numberOfHouse: 3,
             number: 8,
             countOfRooms: 2,
             price: 4000000,
         }
     ]);
-};
+}

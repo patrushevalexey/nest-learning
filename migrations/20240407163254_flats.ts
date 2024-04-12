@@ -7,6 +7,12 @@ export async function up(knex: Knex): Promise<void> {
             .primary()
             .notNullable()
 
+        table.uuid('houseId')
+             .references('id')
+             .inTable('houses')
+             .onDelete('CASCADE')
+             .notNullable()
+
         table.integer('numberOfHouse')
             .notNullable()
 

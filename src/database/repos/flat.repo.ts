@@ -13,11 +13,20 @@ constructor(
 
     async create(dto: CreateFlatDto): Promise<FlatInterface> {
         return this.flatModel.query()
-               .insert({...dto});
+               .insert({
+                   ...dto
+               });
     }
 
     async getAll(): Promise<FlatInterface[]> {
         return this.flatModel.query()
             .select()
+            .withGraphJoined('house')
+    }
+
+    async delete(id: string): Promise<void> {
+        this.flatModel.query()
+            .delete()
+            .where('id', id)
     }
 }

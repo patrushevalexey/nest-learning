@@ -1,4 +1,4 @@
-import { Controller, Get, Inject, Post } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Inject, Post } from "@nestjs/common";
 import { CreateFlatDto } from "../dto/flat.dto";
 import { FlatInterface } from "../interfaces/flat.interface";
 import { FlatsService } from "../services/flats.service";
@@ -11,7 +11,7 @@ export class FlatsControllers {
 	) {}
 
 	@Post('api/v1/flat')
-	async crate(dto: CreateFlatDto): Promise<FlatInterface> {
+	async create(@Body() dto: CreateFlatDto): Promise<FlatInterface> {
 		return this.flatsService.create(dto)
 	}
 
@@ -19,4 +19,9 @@ export class FlatsControllers {
 	async getAll(): Promise<FlatInterface[]> {
 		return this.flatsService.getAll();
 	}
+
+	@Delete('api/v1/flat/:id')
+    async delete(id: string): Promise<void> {
+        await this.flatsService.delete(id);
+    }
 }
