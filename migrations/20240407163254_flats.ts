@@ -25,6 +25,9 @@ export async function up(knex: Knex): Promise<void> {
         table.string('numberOfHouse')
 
         table.uuid('ownerId')
+            .references('id')
+            .inTable('owner_of_flat')
+            .onDelete('CASCADE')
     })
 }
 
