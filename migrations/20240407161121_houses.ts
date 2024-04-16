@@ -4,9 +4,7 @@ export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable('houses', (table) => {
     table.uuid('id')
          .primary()
-         .defaultTo(
-             knex.raw('uuid_generate_v4()')
-         )
+         .defaultTo(knex.fn.uuid())
 
     table.string('city')
          .notNullable()

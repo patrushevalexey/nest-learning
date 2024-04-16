@@ -5,18 +5,13 @@ export async function up(knex: Knex): Promise<void> {
     await knex.schema.createTable('flats', table => {
         table.uuid('id')
              .primary()
-             .defaultTo(
-                 knex.raw('uuid_generate_v4()')
-             )
+             .defaultTo(knex.fn.uuid())
 
         table.uuid('houseId')
              .references('id')
              .inTable('houses')
              .onDelete('CASCADE')
              .notNullable()
-
-        table.integer('numberOfHouse')
-            .notNullable()
 
         table.integer('number')
             .notNullable()
@@ -26,6 +21,10 @@ export async function up(knex: Knex): Promise<void> {
 
         table.integer('price')
             .notNullable()
+
+        table.string('numberOfHouse')
+
+        table.uuid('ownerId')
     })
 }
 

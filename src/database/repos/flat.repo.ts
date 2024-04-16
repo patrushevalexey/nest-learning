@@ -22,6 +22,7 @@ constructor(
         return this.flatModel.query()
             .select()
             .withGraphJoined('house')
+            .withGraphJoined('owner')
     }
 
     async delete(id: string): Promise<void> {

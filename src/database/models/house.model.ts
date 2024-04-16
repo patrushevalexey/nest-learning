@@ -1,6 +1,7 @@
 import { Model } from 'objection';
+import { HouseInterface } from "../../interfaces/house.interface";
 
-export class HouseModel extends Model {
+export class HouseModel extends Model implements Omit<HouseInterface, 'id'>{
   static tableName: string = 'houses';
 
   id: string;

@@ -7,20 +7,20 @@ export async function seed(knex: Knex): Promise<void> {
             city: "Moscow",
             street: "15 Parkovaya",
             number: 3,
-            countOfFlats: 10,
+            countOfFlats: 2,
         },
         {
             id: "5c2f908b-c53a-4882-9ea0-c5264aa1fde4",
             city: "Moscow",
             street: "Maroseyka",
             number: 65,
-            countOfFlats: 4,
+            countOfFlats: 3,
         },{
             id: "8709bd9a-e387-4848-8971-e25839b26053",
             city: "Moscow",
             street: "Pervomayskaya",
             number: 11,
-            countOfFlats: 8,
+            countOfFlats: 4,
         },
     ]);
 }
