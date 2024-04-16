@@ -1,10 +1,6 @@
 import { Knex } from "knex";
 
 export async function seed(knex: Knex): Promise<void> {
-    // Deletes ALL existing entries
-    await knex("flats").del();
-
-    // Inserts seed entries
     await knex("flats").insert([
         {
             id: "eaf70fce-dd21-427b-88c5-237f6da05ac8",
