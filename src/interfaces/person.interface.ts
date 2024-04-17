@@ -1,4 +1,4 @@
-export interface OwnerOfFlatInterface {
+export interface PersonInterface {
 	id: string;
 	firstName: string;
 	lastName: string;

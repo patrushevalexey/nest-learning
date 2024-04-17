@@ -23,10 +23,10 @@ export class FlatModel extends Model implements Omit<FlatInterface, 'id'>{
     },
     owner: {
       relation: Model.HasOneRelation,
-      modelClass: `${__dirname}/owner-of-flat.model`,
+      modelClass: `${__dirname}/person.model`,
       join: {
         from: 'flats.ownerId',
-        to: 'owner_of_flat.id'
+        to: 'person.id'
       }
     }
   }

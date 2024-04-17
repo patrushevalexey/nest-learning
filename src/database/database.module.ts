@@ -6,11 +6,11 @@ import { HouseModel } from './models/house.model';
 import { HouseRepo } from './repos/house.repo';
 import {FlatModel} from "./models/flat.model";
 import {FlatsRepo} from "./repos/flat.repo";
-import { OwnerOfFlatModel } from "./models/owner-of-flat.model";
-import { OwnerOfFlatRepo } from "./repos/owner-of-flat.repo";
+import { PersonModel } from "./models/person.model";
+import { PersonRepo } from "./repos/person.repo";
 
-const models = [HouseModel, FlatModel, OwnerOfFlatModel];
-const repos = [HouseRepo, FlatsRepo, OwnerOfFlatRepo];
+const models = [HouseModel, FlatModel, PersonModel];
+const repos = [HouseRepo, FlatsRepo, PersonRepo];
 
 const modelProviders = models.map((model) => ({
   provide: model.name,

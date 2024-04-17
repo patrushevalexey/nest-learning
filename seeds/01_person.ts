@@ -1,7 +1,7 @@
 import { Knex } from "knex";
 
 export async function seed(knex: Knex): Promise<void> {
-    await knex("owner_of_flat").insert([
+    await knex("person").insert([
         {
             id: "a2647fd1-84b9-4f20-905f-8f2105ec2cdf",
             firstName: "Ivan",
