@@ -1,7 +1,7 @@
 import { Model } from "objection";
 import { PersonInterface } from "../../interfaces/person.interface";
 
-export class PersonModel extends Model implements Omit<PersonInterface, 'id'>{
+export class PersonModel extends Model implements Omit<PersonInterface, 'id'> {
 	static tableName: string = 'person';
 
 	id: string;

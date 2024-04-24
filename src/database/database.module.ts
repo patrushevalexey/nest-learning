@@ -4,13 +4,15 @@ import * as knexfile from 'knexfile';
 import { Model } from 'objection';
 import { HouseModel } from './models/house.model';
 import { HouseRepo } from './repos/house.repo';
-import {FlatModel} from "./models/flat.model";
-import {FlatsRepo} from "./repos/flat.repo";
+import { FlatModel } from "./models/flat.model";
+import { FlatsRepo } from "./repos/flat.repo";
 import { PersonModel } from "./models/person.model";
 import { PersonRepo } from "./repos/person.repo";
+import { TravelCompanyModel } from "./models/travel-company.model";
+import { TravelCompanyRepo } from "./repos/travel-company.repo";
 
-const models = [HouseModel, FlatModel, PersonModel];
-const repos = [HouseRepo, FlatsRepo, PersonRepo];
+const models = [HouseModel, FlatModel, PersonModel, TravelCompanyModel];
+const repos = [HouseRepo, FlatsRepo, PersonRepo, TravelCompanyRepo];
 
 const modelProviders = models.map((model) => ({
   provide: model.name,
