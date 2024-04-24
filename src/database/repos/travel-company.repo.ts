@@ -20,6 +20,7 @@ export class TravelCompanyRepo {
 	async getAll(): Promise<TravelCompanyInterface[]> {
 		return this.travelCompanyModel.query()
 			.select()
+			.withGraphJoined('house')
 	}
 
 	async delete(id: string): Promise<void> {

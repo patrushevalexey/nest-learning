@@ -10,9 +10,21 @@ import { PersonModel } from "./models/person.model";
 import { PersonRepo } from "./repos/person.repo";
 import { TravelCompanyModel } from "./models/travel-company.model";
 import { TravelCompanyRepo } from "./repos/travel-company.repo";
+import { HousesTravelCompanyModel } from "./models/houses_travel-company.model";
 
-const models = [HouseModel, FlatModel, PersonModel, TravelCompanyModel];
-const repos = [HouseRepo, FlatsRepo, PersonRepo, TravelCompanyRepo];
+const models = [
+    HouseModel,
+    FlatModel,
+    PersonModel,
+    TravelCompanyModel,
+    HousesTravelCompanyModel
+];
+const repos = [
+    HouseRepo,
+    FlatsRepo,
+    PersonRepo,
+    TravelCompanyRepo
+];
 
 const modelProviders = models.map((model) => ({
   provide: model.name,

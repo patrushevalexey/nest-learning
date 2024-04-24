@@ -3,7 +3,7 @@ import type { Knex } from "knex";
 
 export async function up(knex: Knex): Promise<void> {
 	await knex.schema.createTable('travelCompany', table => {
-		table.string('id')
+		table.uuid('id')
 			.primary()
 			.defaultTo(
 				knex.fn.uuid()

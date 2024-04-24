@@ -9,7 +9,7 @@ export class PersonRepo {
 	constructor(
 		@Inject('PersonModel')
 		private readonly personModel: ModelClass<PersonModel>,
-	) {}
+	) { }
 
 	async create(dto: CreatePersonDto): Promise<PersonInterface> {
 		return this.personModel.query()

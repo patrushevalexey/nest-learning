@@ -1,7 +1,9 @@
 import { Model } from 'objection';
 import { HouseInterface } from "../../interfaces/house.interface";
+import { FlatInterface } from "../../interfaces/flat.interface";
+import { TravelCompanyInterface } from "../../interfaces/travel-company.interface";
 
-export class HouseModel extends Model implements Omit<HouseInterface, 'id'>{
+export class HouseModel extends Model implements HouseInterface {
   static tableName: string = 'houses';
 
   id: string;
@@ -10,6 +12,9 @@ export class HouseModel extends Model implements Omit<HouseInterface, 'id'>{
   number: number;
   countOfFlats: number;
 
+  flats?: FlatInterface[];
+  travelCompany?: TravelCompanyInterface[];
+
   static relationMappings = {
     flats: {
       relation: Model.HasManyRelation,
@@ -17,6 +22,19 @@ export class HouseModel extends Model implements Omit<HouseInterface, 'id'>{
       join: {
         from: 'houses.id',
         to: 'flats.houseId'
+      }
+    },
+
+    travelCompany: {
+      modelClass: `${__dirname}/travel-company.model`,
+      relation: Model.ManyToManyRelation,
+      join: {
+        from: 'houses.id',
+        through: {
+          from: 'houses_travel-company.houseId',
+          to: 'houses_travel-company.travelCompanyId'
+        },
+        to: 'travelCompany.id'
       }
     }
   }

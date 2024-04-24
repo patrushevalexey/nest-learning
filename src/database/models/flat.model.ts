@@ -1,7 +1,9 @@
 import { Model } from 'objection';
 import { FlatInterface } from "../../interfaces/flat.interface";
+import { HouseInterface } from "../../interfaces/house.interface";
+import { PersonInterface } from "../../interfaces/person.interface";
 
-export class FlatModel extends Model implements Omit<FlatInterface, 'id'>{
+export class FlatModel extends Model implements FlatInterface{
   static tableName: string = 'flats';
 
   id: string;
@@ -11,6 +13,9 @@ export class FlatModel extends Model implements Omit<FlatInterface, 'id'>{
   price: number;
   ownerId: string;
   numberOfHouse: number;
+
+  house?: HouseInterface;
+  owner: PersonInterface;
 
   static relationMappings = {
     house: {
