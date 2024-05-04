@@ -4,27 +4,22 @@ import * as knexfile from 'knexfile';
 import { Model } from 'objection';
 import { HouseModel } from './models/house.model';
 import { HouseRepo } from './repos/house.repo';
-import { FlatModel } from "./models/flat.model";
-import { FlatsRepo } from "./repos/flat.repo";
-import { PersonModel } from "./models/person.model";
-import { PersonRepo } from "./repos/person.repo";
-import { TravelCompanyModel } from "./models/travel-company.model";
-import { TravelCompanyRepo } from "./repos/travel-company.repo";
-import { HousesTravelCompanyModel } from "./models/houses_travel-company.model";
+import { FlatModel } from './models/flat.model';
+import { FlatsRepo } from './repos/flat.repo';
+import { PersonModel } from './models/person.model';
+import { PersonRepo } from './repos/person.repo';
+import { TravelCompanyModel } from './models/travel-company.model';
+import { TravelCompanyRepo } from './repos/travel-company.repo';
+import { HousesTravelCompanyModel } from './models/houses_travel-company.model';
 
 const models = [
-    HouseModel,
-    FlatModel,
-    PersonModel,
-    TravelCompanyModel,
-    HousesTravelCompanyModel
+  HouseModel,
+  FlatModel,
+  PersonModel,
+  TravelCompanyModel,
+  HousesTravelCompanyModel,
 ];
-const repos = [
-    HouseRepo,
-    FlatsRepo,
-    PersonRepo,
-    TravelCompanyRepo
-];
+const repos = [HouseRepo, FlatsRepo, PersonRepo, TravelCompanyRepo];
 
 const modelProviders = models.map((model) => ({
   provide: model.name,
@@ -48,5 +43,4 @@ const internalProviders: Provider[] = [
   providers: [...internalProviders, ...repos],
   exports: [...repos],
 })
-
 export class DatabaseModule {}

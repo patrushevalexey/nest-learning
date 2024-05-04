@@ -4,10 +4,10 @@ import { HouseRepo } from '../database/repos/house.repo';
 
 @Injectable()
 export class HouseService {
-constructor(
-  @Inject(HouseRepo)
-  private readonly houseRepo: HouseRepo,
-) {}
+  constructor(
+    @Inject(HouseRepo)
+    private readonly houseRepo: HouseRepo,
+  ) {}
 
   public async getAll(): Promise<HouseInterface[]> {
     return this.houseRepo.getAll();

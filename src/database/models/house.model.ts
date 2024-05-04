@@ -1,7 +1,7 @@
 import { Model } from 'objection';
-import { HouseInterface } from "../../interfaces/house.interface";
-import { FlatInterface } from "../../interfaces/flat.interface";
-import { TravelCompanyInterface } from "../../interfaces/travel-company.interface";
+import { HouseInterface } from '../../interfaces/house.interface';
+import { FlatInterface } from '../../interfaces/flat.interface';
+import { TravelCompanyInterface } from '../../interfaces/travel-company.interface';
 
 export class HouseModel extends Model implements HouseInterface {
   static tableName: string = 'houses';
@@ -21,8 +21,8 @@ export class HouseModel extends Model implements HouseInterface {
       modelClass: `${__dirname}/flat.model`,
       join: {
         from: 'houses.id',
-        to: 'flats.houseId'
-      }
+        to: 'flats.houseId',
+      },
     },
 
     travelCompany: {
@@ -32,10 +32,10 @@ export class HouseModel extends Model implements HouseInterface {
         from: 'houses.id',
         through: {
           from: 'houses_travel-company.houseId',
-          to: 'houses_travel-company.travelCompanyId'
+          to: 'houses_travel-company.travelCompanyId',
         },
-        to: 'travelCompany.id'
-      }
-    }
-  }
+        to: 'travelCompany.id',
+      },
+    },
+  };
 }

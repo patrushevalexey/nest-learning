@@ -10,10 +10,11 @@ export class HouseRepo {
     private readonly houseModel: ModelClass<HouseModel>,
   ) {}
 
-  async getAll() : Promise<HouseInterface[]> {
-    return this.houseModel.query()
-               .select()
-               .withGraphJoined('flats')
-               .withGraphJoined('travelCompany')
+  async getAll(): Promise<HouseInterface[]> {
+    return this.houseModel
+      .query()
+      .select()
+      .withGraphJoined('flats')
+      .withGraphJoined('travelCompany');
   }
 }

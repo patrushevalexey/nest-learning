@@ -1,11 +1,11 @@
-import { Injectable } from "@nestjs/common";
-import { Model } from "objection";
+import { Injectable } from '@nestjs/common';
+import { Model } from 'objection';
 
-Injectable()
+Injectable();
 export class HousesTravelCompanyModel extends Model {
-	static tableName = "houses_travel-company";
+  static tableName = 'houses_travel-company';
 
-	id: string;
-	houseId: string;
-	travelCompanyId: string;
+  id: string;
+  houseId: string;
+  travelCompanyId: string;
 }
